@@ -12,5 +12,16 @@
         <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } , class:"card-link btn btn-danger"%>
         <% end %>
         <%= link_to 'Back', posts_path, class:"btn btn-secondary" %>
+        <hr class="my-3">
+        <h5 class="ml-auto"><%= @post.comments.count %> comments</h5>
+        <div class="card p-2 m-2">
+            <div class="card-header">
+                Add Comment
+            </div>
+            <%= render 'comments/form' %>
+        </div>
+        <hr class="my-3">
+        <%= render @post.comments %>
     </div>
+
 </div>
