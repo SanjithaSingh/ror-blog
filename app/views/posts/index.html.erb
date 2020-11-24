@@ -5,7 +5,7 @@
 <div class="card p-2 m-2 mb-3">
     <%= link_to post.title, post, class:"h5 card-title" %>
     <h6 class="card-subtitle mb-2 text-muted">
-        Posted by: <%= post.user_id %>
+        Posted by: <%= post.user.email %>
     </h6>
     <div class="card-body">
         <p class="card-text">
