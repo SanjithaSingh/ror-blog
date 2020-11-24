@@ -1,6 +1,8 @@
+<% if comment.body%>
 <div class="card my-2">
     <div class="card-body">
         <h5 class="card-title text-info"><%= comment.name %></h5>
         <%= comment.body %>
     </div>
 </div>
+<%end %>
