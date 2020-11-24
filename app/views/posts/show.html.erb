@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-lg-8">
+        <h1 class="mt-4"> <%= @post.title %></h1>
+        <p class="lead text-muted">
+            by <%= @post.user_id %> </p>
+        <hr>
+        <p class="text-muted">Posted on : sometime</p>
+
+        <hr>
+        <p><%= @post.body %>
+        </p>
+        <hr>
+        <% if @post.user == current_user%>
+        <%= link_to 'Edit', edit_post_path(@post),class:"btn btn-warning" %>
+        <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } , class:"card-link btn btn-danger"%>
+        <% end %>
+        <%= link_to 'Back', posts_path, class:"btn btn-secondary" %>
+    </div>
+</div>
